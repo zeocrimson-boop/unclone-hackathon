@@ -1,0 +1,41 @@
+{
+  "name": "echoguard",
+  "version": "1.0.0",
+  "description": "Independent voice authenticity, explainable text scam assessment and community phone reports",
+  "main": "server.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check app.js && node --check public/app.js && node --check services/detectifai.js && node --check services/scam-analysis.js && node --check services/validation.js && node --check services/community.js && node --check scripts/migrate.js && node --check public/community.js",
+    "test:browser": "node scripts/browser-check.mjs",
+    "db:migrate": "node scripts/migrate.js",
+    "test:db": "node scripts/db-check.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeocrimson-boop/unclone-hackathon.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/zeocrimson-boop/unclone-hackathon/issues"
+  },
+  "homepage": "https://github.com/zeocrimson-boop/unclone-hackathon#readme",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "libphonenumber-js": "^1.13.15",
+    "multer": "^2.4.0",
+    "pg": "^8.23.1",
+    "undici": "^8.12.2"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "playwright": "^1.62.1"
+  }
+}

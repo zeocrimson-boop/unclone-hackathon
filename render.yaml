@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: echoguard
+    runtime: node
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY_HOPS
+        value: "1"
+      - key: DETECTIF_DEEPFAKE_URL
+        value: https://platform.detectif.ai/v1/deepfake/detect
+# Optional services are intentionally not provisioned or billed automatically.
+# Set DATABASE_URL, REPORT_ABUSE_SECRET and DETECTIF_API_KEY in Render's dashboard.
+# Run npm run db:migrate against the selected database before enabling reports.

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Privacy, sources & limitations — EchoGuard</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/mark.svg" />
+  </head>
+  <body>
+    <main class="wrap about">
+      <a href="/">← Back to EchoGuard</a>
+      <p class="eyebrow">OPEN ABOUT OUR EVIDENCE</p>
+      <h1>Privacy, sources & limitations</h1>
+      <h2>Three independent signals</h2>
+      <p>
+        EchoGuard uses transparent English-language rules to assess pasted text.
+        These are editorial triage rules, not a trained AI model or calibrated
+        probabilities. Negation, quoted speech and unfamiliar tactics can be
+        misread. No warning signs does not prove safety.
+      </p>
+      <p>
+        When configured, DetectifAI assesses indications of synthetic speech.
+        Its verdict cannot identify a speaker or establish fraud. Phone-quality
+        audio can be less reliable. The provider is tuned for English; speaker
+        verification is a separate service and is not included here.
+      </p>
+      <p>
+        Community reports are unverified allegations. A number may be spoofed or
+        reassigned. Counts represent submissions, not distinct people or proof
+        of wrongdoing. No reports found does not mean a number is safe.
+      </p>
+      <h2>Audio and text privacy</h2>
+      <p>
+        Audio is limited to 10 MB and kept in request-scoped memory; EchoGuard
+        does not write recordings to disk or permanently store them. Buffers are
+        cleared after processing, but this is not a guarantee of forensic memory
+        erasure. When enabled, audio is sent to DetectifAI. Review the
+        <a href="https://platform.detectif.ai/privacy/"
+          >provider’s privacy policy</a
+        >
+        before uploading sensitive recordings. Do not assume that an external
+        provider has no retention.
+      </p>
+      <p>
+        Pasted text is processed locally on the server and is not saved by
+        EchoGuard. Remove names, account details, authentication codes and other
+        private information before submitting. No automatic audio transcription
+        is provided. Hosting providers may retain operational metadata according
+        to their policies.
+      </p>
+      <h2>Community data and review</h2>
+      <p>
+        Reports store a normalized phone number, category, optional private
+        description, timestamp and visibility status in PostgreSQL. Descriptions
+        are never published by the public API. Do not submit names, financial
+        information, OTPs or recordings. No reverse-number lookups or identity
+        searches are performed.
+      </p>
+      <p>
+        Abuse prevention stores a daily rotating HMAC hash of the connection
+        address rather than the address itself. A shared connection may share
+        limits. Abuse windows and report hashes expire from active storage after
+        two days when submissions next run. Backups may retain older data.
+        Reports remain until the operator removes them under its retention
+        policy; operators must review and set a suitable policy before public
+        launch.
+      </p>
+      <p>
+        Use “Request review” after searching a number to flag a misleading or
+        privacy-sensitive result. Requests enter a private review queue; removal
+        is not automatic. The operator must regularly review that queue. For a
+        private description requiring correction, use the deployment operator’s
+        support channel; this prototype does not collect reporter identities or
+        offer authenticated self-service deletion.
+      </p>
+      <h2>Missing services and uncertainty</h2>
+      <p>
+        Text analysis works without credentials. Voice analysis requires a
+        DetectifAI key with the correct scope and credits. Community reporting
+        requires a migrated database and abuse-prevention secret. Service
+        failures are displayed as errors, not successful safe assessments.
+      </p>
+      <h2>Reference & attribution</h2>
+      <p>
+        Upload selection, drag-and-drop, and request lifecycle code was adapted
+        from
+        <a href="https://github.com/SanchiJoshi/ai-voice-detector"
+          >Sanchi Joshi’s AI Voice Detector</a
+        >, commit 138f371eb16bc78cce8e7ba4ddf8e7c1e6218278. MIT License,
+        Copyright (c) 2026 Sanchi Joshi. Its full licence is preserved in the
+        project’s licenses directory. The model, weights and accuracy claims are
+        not included in EchoGuard.
+      </p>
+      <h2>Hackathon disclosure</h2>
+      <p>
+        EchoGuard builds on the existing application supplied in lets-try.
+        Disclose that source, the adapted MIT upload code, and any development
+        tools required by the event. Confirm the organizers’ rules about reuse
+        and pre-event work before submission.
+      </p>
+    </main>
+  </body>
+</html>

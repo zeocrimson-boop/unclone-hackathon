@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080e1d" />
+    <meta
+      name="description"
+      content="Hear the voice. Uncover the risk. Independent voice analysis, explainable text scam checks, and community phone reports."
+    />
+    <title>EchoGuard — Hear the voice. Uncover the risk.</title>
+    <link rel="icon" href="/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+    <script src="/community.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#analyzer">Skip to analyzer</a>
+    <header class="header wrap">
+      <a class="brand" href="#"
+        ><img src="/mark.svg" width="39" height="43" alt="" /><span
+          >Echo<span class="cyan">Guard</span
+          ><small>VOICE & CONVERSATION FORENSICS</small></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#community">Community</a
+        ><a href="#how-it-works">How it works</a><a href="#safety">Safety</a
+        ><a class="button small outline" href="#analyzer"
+          >Start investigating <span class="arrow" aria-hidden="true"></span
+        ></a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot"></span> BUILT FOR THE AGE OF SYNTHETIC
+            VOICES
+          </p>
+          <h1>Hear the voice.<br /><span>Uncover the risk.</span></h1>
+          <p class="intro">
+            A familiar voice. An urgent message. An unknown number. Take a
+            closer look with three independent ways to investigate suspicious
+            communications.
+          </p>
+          <a href="#analyzer" class="button primary"
+            >Open the workspace <span class="arrow" aria-hidden="true"></span
+          ></a>
+          <p class="hero-note">
+            <svg class="icon"><use href="#lock" /></svg> No account. No
+            permanent recording storage.
+          </p>
+        </div>
+        <div
+          class="signal-card"
+          aria-label="Decorative audio signal illustration, not a detection result"
+        >
+          <div class="signal-top">
+            <span><span class="status-dot"></span> SIGNAL EXPLORER</span
+            ><span class="mono muted">ILLUSTRATION</span>
+          </div>
+          <div class="signal-art">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <img src="/mark.svg" alt="" class="signal-shield" /><svg
+              class="wave"
+              viewBox="0 0 560 150"
+              aria-hidden="true"
+            >
+              <path
+                d="M0 75h40l5-8 5 16 5-8h25l5-17 5 34 5-17h15l5-28 5 56 5-28h12l5-45 5 90 5-45h12l5-61 5 122 5-61h12l5-35 5 70 5-35h15l5-19 5 38 5-19h100l5-20 5 40 5-20h12l5-35 5 70 5-35h12l5-60 5 120 5-60h12l5-45 5 90 5-45h12l5-28 5 56 5-28h12l5-15 5 30 5-15h50"
+              />
+            </svg>
+          </div>
+          <div class="signal-labels">
+            <span>01 / VOICE AUTHENTICITY</span
+            ><span>02 / TEXT RISK · 03 / COMMUNITY</span>
+          </div>
+          <div class="signal-foot">
+            <span>Three signals. Your informed decision.</span
+            ><span class="cyan" aria-hidden="true">◇</span>
+          </div>
+        </div>
+      </section>
+      <section class="principles wrap" aria-label="Our approach">
+        <span
+          ><svg class="icon"><use href="#shield" /></svg> Evidence over
+          assumptions</span
+        ><span
+          ><svg class="icon"><use href="#split" /></svg> Independent
+          assessments</span
+        ><span
+          ><svg class="icon"><use href="#eye" /></svg> Transparent about
+          uncertainty</span
+        >
+      </section>
+      <section class="capabilities wrap" aria-label="Choose an investigation">
+        <a href="#voice-analysis"
+          ><span class="cap-number">01 / AUDIO</span>
+          <h2>Question the voice.</h2>
+          <p>
+            Look for synthetic speech with DetectifAI. A voice signal, never a
+            fraud verdict.
+          </p>
+          <span class="cap-link">Voice analysis ↗</span></a
+        >
+        <a href="#text-analysis"
+          ><span class="cap-number">02 / TEXT</span>
+          <h2>Read between the lines.</h2>
+          <p>
+            Understand suspicious demands with local rules and evidence from
+            your message.
+          </p>
+          <span class="cap-link">Text scam detector ↗</span></a
+        >
+        <a href="#community"
+          ><span class="cap-number">03 / COMMUNITY</span>
+          <h2>Check the shared signals.</h2>
+          <p>
+            Search community-submitted activity. Unverified reports, presented
+            with care.
+          </p>
+          <span class="cap-link">Phone reports ↗</span></a
+        >
+      </section>
+      <section class="workspace wrap" id="analyzer">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE INVESTIGATION WORKSPACE</p>
+            <h2>A little caution. A clearer picture.</h2>
+            <p>
+              Choose a recording, paste a message, or search community reports.
+            </p>
+          </div>
+          <span class="pill"
+            ><span class="status-dot"></span> Text analysis available</span
+          >
+        </div>
+        <div class="analyzer-grid">
+          <article class="panel upload-panel" id="voice-analysis">
+            <div class="panel-heading">
+              <span class="step">01</span>
+              <div>
+                <h3>Voice authenticity</h3>
+                <p>Examine the signal behind the voice.</p>
+              </div>
+              <svg class="icon corner-icon"><use href="#wave" /></svg>
+            </div>
+            <div class="notice">
+              <span class="tiny-dot"></span>
+              <span id="voice-status"
+                >Checking voice service configuration…</span
+              >
+            </div>
+            <form id="audio-form">
+              <input
+                id="audio-file"
+                aria-label="Select an audio recording"
+                type="file"
+                accept=".wav,.mp3,.m4a,audio/wav,audio/mpeg,audio/mp4"
+                class="sr-only"
+                aria-describedby="audio-help"
+              />
+              <div class="dropzone" id="file-drop">
+                <div class="upload-symbol">
+                  <svg><use href="#upload" /></svg>
+                </div>
+                <h4>Bring the conversation into focus</h4>
+                <p>Drag and drop your recording here</p>
+                <button type="button" class="button outline" id="choose-file">
+                  Choose audio file <span aria-hidden="true">+</span></button
+                ><small id="audio-help"
+                  >WAV, MP3, M4A · EchoGuard limit: 10 MB · Longer than 4s, up
+                  to 120s</small
+                >
+              </div>
+              <div id="file-card" class="file-card" hidden>
+                <svg class="icon cyan"><use href="#wave" /></svg>
+                <div>
+                  <strong id="file-name"></strong><small id="file-size"></small>
+                </div>
+                <button
+                  type="button"
+                  id="remove-file"
+                  class="icon-button"
+                  aria-label="Remove recording"
+                >
+                  ×</button
+                ><audio id="audio-preview" controls preload="metadata"></audio>
+              </div>
+              <p class="field-error" id="audio-error" role="alert"></p>
+              <button
+                class="button primary full"
+                id="analyze-audio"
+                type="submit"
+              >
+                Analyze recording <span class="arrow" aria-hidden="true"></span>
+              </button>
+            </form>
+            <p class="fine-print">
+              <svg class="icon"><use href="#lock" /></svg> Only upload
+              recordings you are authorized to process. Audio is held
+              temporarily in memory, never saved to disk.
+            </p>
+            <div
+              class="inline-result"
+              id="voice-feedback"
+              role="status"
+              hidden
+            ></div>
+          </article>
+          <article class="panel transcript-panel" id="text-analysis">
+            <div class="panel-heading">
+              <span class="step violet">02</span>
+              <div>
+                <h3>Text scam detector</h3>
+                <p>Look beyond how convincing it sounds.</p>
+              </div>
+              <svg class="icon corner-icon"><use href="#text" /></svg>
+            </div>
+            <div class="notice available">
+              <span class="tiny-dot"></span> Works independently · No API key
+              needed
+            </div>
+            <form id="transcript-form">
+              <label for="transcript">What would you like to check?</label
+              ><textarea
+                id="transcript"
+                maxlength="12000"
+                placeholder="Paste a message, email, job offer, or manually obtained transcript. Include requests for money, credentials, or urgent action…"
+                aria-describedby="transcript-help"
+              ></textarea>
+              <div class="textarea-foot">
+                <small id="transcript-help"
+                  >Manual entry · English-language rules</small
+                ><span id="char-count">0 / 12,000</span>
+              </div>
+              <p class="field-error" id="transcript-error" role="alert"></p>
+              <div class="form-actions">
+                <button
+                  type="button"
+                  class="button subtle"
+                  id="clear-transcript"
+                >
+                  Clear</button
+                ><button
+                  type="submit"
+                  id="analyze-transcript"
+                  class="button secondary"
+                >
+                  Analyze Text
+                  <span class="arrow" aria-hidden="true"></span>
+                </button>
+              </div>
+            </form>
+            <p class="fine-print">
+              <svg class="icon"><use href="#eye" /></svg> Transparent pattern
+              checks, not a verdict. Audio is never automatically transcribed.
+              Remove personal details before pasting.
+            </p>
+          </article>
+        </div>
+        <section
+          class="report panel"
+          id="report"
+          aria-labelledby="report-heading"
+          tabindex="-1"
+        >
+          <div class="report-top">
+            <div>
+              <p class="eyebrow">YOUR EVIDENCE, EXPLAINED</p>
+              <h3 id="report-heading">The investigation starts with you.</h3>
+            </div>
+            <span class="pill" id="report-badge">Awaiting input</span>
+          </div>
+          <div id="empty-report" class="empty-report">
+            <div class="empty-icon">
+              <svg><use href="#shield" /></svg>
+            </div>
+            <div>
+              <h4>Clarity starts with a closer look.</h4>
+              <p>
+                Analyze text to see warning signs, supporting phrases, and
+                practical next steps. No results are generated until you submit.
+              </p>
+            </div>
+          </div>
+          <div id="report-content" hidden>
+            <div class="assessment-grid">
+              <div class="assessment">
+                <span class="eyebrow">TEXT ASSESSMENT</span>
+                <h4 id="risk-value"></h4>
+                <p id="risk-summary"></p>
+                <small
+                  >Preliminary rule-based assessment · Not a probability</small
+                >
+              </div>
+              <div class="assessment voice-assessment">
+                <span class="eyebrow">VOICE AUTHENTICITY</span>
+                <h4 id="voice-value">Not assessed</h4>
+                <p id="voice-summary">
+                  Transcript analysis cannot determine whether a voice is
+                  synthetic.
+                </p>
+                <small
+                  >Voice results never determine the scam-risk level.</small
+                >
+              </div>
+            </div>
+            <div class="report-details">
+              <div>
+                <h4>
+                  Evidence & warning signs
+                  <span id="finding-count" class="count"></span>
+                </h4>
+                <div id="findings"></div>
+              </div>
+              <aside>
+                <h4>Your next steps</h4>
+                <ol id="next-steps"></ol>
+              </aside>
+            </div>
+            <details>
+              <summary>View the analyzed text</summary>
+              <p id="submitted-transcript" class="submitted-transcript"></p>
+            </details>
+            <div class="limitations">
+              <svg class="icon"><use href="#info" /></svg>
+              <p id="limitations"></p>
+            </div>
+            <button class="button outline small" id="start-over">
+              Start a new investigation
+              <span class="arrow" aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+      </section>
+      <section class="community wrap" id="community">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE COMMUNITY SIGNAL</p>
+            <h2>Unknown number. Shared experiences.</h2>
+            <p>
+              Search reports or contribute an experience without sharing your
+              identity.
+            </p>
+          </div>
+          <span class="pill" id="community-status">Checking availability…</span>
+        </div>
+        <div class="analyzer-grid">
+          <article class="panel">
+            <div class="panel-heading">
+              <span class="step">03</span>
+              <div>
+                <h3>Search a phone number</h3>
+                <p>Only reports submitted to EchoGuard are searched.</p>
+              </div>
+            </div>
+            <form id="phone-search">
+              <label for="search-phone">Phone number with country code</label
+              ><input
+                id="search-phone"
+                type="tel"
+                placeholder="+91 98765 43210"
+                maxlength="35"
+                autocomplete="tel"
+                required
+                aria-describedby="search-help"
+              />
+              <p class="fine-print" id="search-help">
+                Include + and the country code. No identity or reverse-number
+                lookup.
+              </p>
+              <button class="button primary" type="submit">
+                Search reports
+              </button>
+            </form>
+            <div
+              id="phone-result"
+              class="community-result"
+              role="status"
+              aria-live="polite"
+            >
+              Search to see actual community submissions. No example reports are
+              displayed.
+            </div>
+            <form id="review-form" hidden>
+              <label for="review-reason"
+                >Flag this result for operator review</label
+              ><select id="review-reason">
+                <option value="misleading">
+                  Misleading or inaccurate result
+                </option>
+                <option value="privacy">Privacy concern</option>
+                <option value="other">Other concern</option></select
+              ><button class="button outline small" type="submit">
+                Request review
+              </button>
+              <p id="review-feedback" role="status"></p>
+            </form>
+          </article>
+          <article class="panel">
+            <div class="panel-heading">
+              <span class="step violet">+</span>
+              <div>
+                <h3>Share an experience</h3>
+                <p>Help others notice a pattern. Report responsibly.</p>
+              </div>
+            </div>
+            <form id="phone-report">
+              <label for="report-phone">Phone number with country code</label
+              ><input
+                id="report-phone"
+                type="tel"
+                placeholder="+91 98765 43210"
+                maxlength="35"
+                required
+              />
+              <label for="report-category">What happened?</label
+              ><select id="report-category" required>
+                <option value="">Select a category</option>
+              </select>
+              <label for="report-description"
+                >Short description
+                <span class="muted">(optional, private)</span></label
+              ><textarea
+                id="report-description"
+                maxlength="500"
+                placeholder="Describe the request. Do not include names, OTPs, account details, or private recordings."
+              ></textarea>
+              <label class="consent"
+                ><input id="report-consent" type="checkbox" required /><span
+                  >This describes my experience accurately to the best of my
+                  knowledge. I understand reports are unverified
+                  submissions.</span
+                ></label
+              >
+              <button class="button secondary" type="submit">
+                Submit community report
+              </button>
+              <p
+                id="report-feedback"
+                class="community-result"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </article>
+        </div>
+        <p class="community-notice">
+          Community-reported activity — not independently verified. Counts
+          represent submissions, not distinct people or proof of wrongdoing. No
+          reports found does not mean a number is safe. Phone numbers, private
+          descriptions and timestamps are stored when reporting is configured.
+          <a href="/about.html">Privacy & review policy ↗</a>
+        </p>
+      </section>
+      <section class="how wrap" id="how-it-works">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A PRACTICAL SECOND OPINION</p>
+            <h2>Separate the voice from the story.</h2>
+          </div>
+        </div>
+        <div class="how-grid">
+          <article>
+            <span class="how-number">01 / COLLECT</span>
+            <h3>Choose your evidence.</h3>
+            <p>
+              Select an authorized recording or paste the actual transcript. You
+              stay in control of what you share.
+            </p>
+          </article>
+          <article>
+            <span class="how-number">02 / EXAMINE</span>
+            <h3>Examine each signal.</h3>
+            <p>
+              Transparent text rules explain concerning requests. DetectifAI
+              examines audio when configured. Community search shows actual
+              stored submissions.
+            </p>
+          </article>
+          <article>
+            <span class="how-number">03 / VERIFY</span>
+            <h3>Make the next move carefully.</h3>
+            <p>
+              Read the evidence, pause under pressure, and verify the recruiter
+              through an independent official channel.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="safety wrap" id="safety">
+        <div class="safety-mark">
+          <svg><use href="#shield" /></svg>
+        </div>
+        <div>
+          <p class="eyebrow">YOUR SAFETY COMES FIRST</p>
+          <h2>A human voice can still tell a harmful story.</h2>
+          <p>
+            Synthetic audio does not prove fraud. Natural audio does not prove
+            trustworthiness. Never share OTPs or passwords, and independently
+            verify requests for money. Automated checks can be wrong.
+          </p>
+        </div>
+        <a class="button outline" href="#analyzer"
+          >Take a closer look <span class="arrow" aria-hidden="true"></span
+        ></a>
+      </section>
+      <section class="faq wrap" id="faq">
+        <p class="eyebrow">BEFORE YOU INVESTIGATE</p>
+        <h2>Clarity about our limits.</h2>
+        <details>
+          <summary>Does synthetic speech mean a caller is a scammer?</summary>
+          <p>
+            No. Voice authenticity, message content and community reports answer
+            different questions. EchoGuard never combines them into a scam
+            probability.
+          </p>
+        </details>
+        <details>
+          <summary>Can I analyze text without an API key?</summary>
+          <p>
+            Yes. Paste a message, offer, email, or manually obtained transcript.
+            Transparent English-language rules run on the server without an
+            external text service. They can miss scams or misread context.
+          </p>
+        </details>
+        <details>
+          <summary>Will EchoGuard transcribe or store my recording?</summary>
+          <p>
+            No automatic transcription is provided. Audio is processed in
+            request-scoped memory and is not permanently stored by EchoGuard.
+            When configured, DetectifAI receives the audio; its own retention
+            policy applies.
+          </p>
+        </details>
+        <details>
+          <summary>What does a community report prove?</summary>
+          <p>
+            Only that someone submitted a report. Numbers can be spoofed or
+            reassigned. Reports do not identify a person or establish
+            wrongdoing. Flag misleading results for operator review.
+          </p>
+        </details>
+        <details>
+          <summary>
+            What should I do if I have already paid or shared an OTP?
+          </summary>
+          <p>
+            Contact your bank through its official channel immediately, secure
+            affected accounts, preserve evidence, and contact your local
+            cybercrime reporting service. In India, call 1930 for financial
+            cybercrime assistance.
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer class="wrap">
+      <a class="brand" href="#"
+        ><img src="/mark.svg" alt="" width="27" height="30" /><span
+          >EchoGuard</span
+        ></a
+      >
+      <p>Built for UNCLONE AI · Investigative prototype</p>
+      <a href="/about.html">Sources & limitations</a>
+    </footer>
+    <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="shield" viewBox="0 0 24 24">
+          <path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6z" />
+          <path d="m8 12 3 3 5-6" />
+        </symbol>
+        <symbol id="upload" viewBox="0 0 24 24">
+          <path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5" />
+        </symbol>
+        <symbol id="wave" viewBox="0 0 24 24">
+          <path d="M3 10v4m4-8v12m5-16v20m5-16v12m4-8v4" />
+        </symbol>
+        <symbol id="lock" viewBox="0 0 24 24">
+          <rect x="5" y="10" width="14" height="11" rx="2" />
+          <path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" />
+        </symbol>
+        <symbol id="eye" viewBox="0 0 24 24">
+          <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+          <circle cx="12" cy="12" r="3" />
+        </symbol>
+        <symbol id="split" viewBox="0 0 24 24">
+          <path d="M5 21V3m0 14L19 3m-6 0h6v6m-7 4 7 8m-6 0h6v-6" />
+        </symbol>
+        <symbol id="text" viewBox="0 0 24 24">
+          <path d="M4 4h16v13H9l-5 4V4Zm4 5h8m-8 4h5" />
+        </symbol>
+        <symbol id="info" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 11v6m0-10v1" />
+        </symbol>
+      </defs>
+    </svg>
+  </body>
+</html>
